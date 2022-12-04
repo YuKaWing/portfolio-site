@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: "Roboto Mono";
+  }
+
+  body {
+    background-color: #f5f3f2;
+  }
+}
+
+@layer components {
+  .header {
+    background: linear-gradient(90deg,
+        theme('colors.primary-color'),
+        theme('colors.secondary-color'));
+    animation: header-gradient 30s ease infinite;
+    background-size: 400% 100%;
+  }
+
+  @keyframes header-gradient {
+    0% {
+      background-position: 0% 0%;
+    }
+
+    50% {
+      background-position: 100% 0%;
+    }
+
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+  .rgb-button {
+    color: white;
+    border: none;
+    background: transparent;
+    padding: 1rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10rem;
+    box-shadow: 0 0 20px rgb(187, 218, 187);
+    background: linear-gradient(110deg,
+        #e8b71d,
+        #e3e81d,
+        #1de840,
+        #5f55e9,
+        #1ddde8);
+    background-size: 2000% 2000%;
+    animation: rgb-button-gradient 20s ease infinite;
+  }
+
+  @keyframes rgb-button-gradient {
+    0% {
+      background-position: 0% 82%;
+    }
+
+    50% {
+      background-position: 100% 19%;
+    }
+
+    100% {
+      background-position: 0% 82%;
+    }
+  }
+
+  .heading {
+    color: theme("colors.primary-color");
+    font-size: 3.75rem
+      /* 60px */
+    ;
+    line-height: 1;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+
+    @media only screen and (max-width:theme("screens.mobile-s")) {
+      font-size: 3rem
+    }
+
+    .underline {
+      position: absolute;
+      content: "";
+      border-bottom: 20px solid theme("colors.ternary-color");
+      width: 90%;
+      display: block;
+      left: 2.3rem;
+      top: 2.7rem;
+      z-index: -1;
+    }
+  }
+
+  .work-wrapper {
+    cursor: pointer;
+    overflow: hidden;
+
+    img {
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover,
+    &:active {
+      img {
+        transform: scale(1.13);
+      }
+    }
+  }
+
+  .project-button {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 1rem 1.2rem;
+    position: relative;
+    margin-top: 3rem;
+    color: theme('colors.coolGray.700');
+    cursor: pointer;
+    user-select: none;
+
+    &:hover,
+    &:active {
+      color: theme('colors.white');
+
+      &::after {
+        height: 100%;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      background-color: theme('colors.primary-color');
+      width: 100%;
+      bottom: 1px;
+      display: block;
+      transform-origin: bottom;
+      transition: all 0.25s;
+      z-index: -1;
+    }
+  }
+
+  .custom-shadow {
+    box-shadow: 1px 0px 2px 1px rgb(0 0 0 / 0.1);
+  }
+
+  .top-button {
+    transition: all 0.2s ease-in-out;
+
+    &:active {
+      transform: translate(-50%) scale(0.9);
+    }
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
