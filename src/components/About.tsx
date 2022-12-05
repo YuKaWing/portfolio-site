@@ -1,8 +1,23 @@
 import TechItem from "./TechItem";
-import { TechInfo } from "./TechItem";
+import { motion, Variants } from "framer-motion";
 
 function About() {
-  const techs: Array<TechInfo> = [
+  const itemVariants: Variants = {
+    offscreen: {
+      x: "95%"
+    },
+    onscreen: i => ({
+      x: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.3,
+        duration: 1.5,
+        delay: i * 0.05
+      }
+    })
+  };
+
+  const techs = [
     {
       imgSrc: require("@/assets/icons/javascript.png"),
       name: "Javascript",
@@ -76,25 +91,52 @@ function About() {
       name: "Unity",
     },
   ];
-  const techItems = techs.map((tech) => (
-    <TechItem imgSrc={tech.imgSrc} name={tech.name} key={tech.name}></TechItem>
+
+  const techItems = techs.map((tech, index) => (
+    <TechItem imgSrc={tech.imgSrc} name={tech.name} variants={itemVariants} custom={index} key={index}></TechItem>
   ));
+
+  const descriptionVariants: Variants = {
+    offscreen: {
+      x: "-95%"
+    },
+    onscreen: {
+      x: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.3,
+        duration: 1.5,
+      }
+    }
+  };
 
   return (
     <div className="text-center">
       <div className="heading my-24">About me<div className="underline"></div></div>
-      <div className="flex items-center px-5 max-tablet:flex-col">
-        <div className="text-xl text-coolGray-700 pr-1 w-2/5 max-tablet:w-full max-tablet:mb-7">
+      <div className="flex items-center px-5 max-tablet:flex-col overflow-x-hidden pb-2">
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true }}
+          variants={descriptionVariants}
+          className="text-xl text-coolGray-700 pr-1 w-2/5 max-tablet:w-full max-tablet:mb-7"
+        >
           As a Hong Kong Polytechnic University Graduate from Internet &
           Multimedia Technology, I have experience of working across the
           full-stack of software development. I can grow and continue to learn
           from other experienced teams with implementation of real-world
           industry best practices. I keep up with new challenges in the dynamic
           IT Industry for my career.
-        </div>
-        <div className="flex gap-3 flex-wrap justify-evenly w-3/5 max-tablet:w-full">
+        </motion.div>
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true }}
+          variants={itemVariants}
+          className="flex gap-3 flex-wrap justify-evenly w-3/5 max-tablet:w-full"
+        >
           {techItems}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
