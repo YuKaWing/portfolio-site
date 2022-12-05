@@ -36,13 +36,12 @@ function Projects() {
             A final year project using ResNet50 and VGG16 for image retrieval.
             Python and Tensorflow were used in the stack.
           </div>
-          <a
-            href="https://github.com/YuKaWing/Deep-Learning-for-Content-Based-Image-Retrieval"
-            target="_blank"
+          <div
+            onClick={() => openUrl("https://github.com/YuKaWing/Deep-Learning-for-Content-Based-Image-Retrieval")}
             className="project-button my-2 mx-auto"
           >
             View Code
-          </a>
+          </div>
         </React.Fragment>
       </Project>
       <Project
@@ -78,20 +77,18 @@ function Projects() {
         <React.Fragment>
           <div className="font-bold text-2xl mb-5">My Hero VS Dragon</div>
           <div>A team project of HTML5 game made in Phaser 3.</div>
-          <a
-            href="https://yukawing.github.io/MyHeroVSDragon/"
-            target="_blank"
+          <div
+            onClick={() => openUrl("https://yukawing.github.io/MyHeroVSDragon/")}
             className="project-button my-2 mx-auto"
           >
             Live Demo
-          </a>
-          <a
-            href="https://github.com/YuKaWing/MyHeroVSDragon"
-            target="_blank"
+          </div>
+          <div
+            onClick={() => openUrl("https://github.com/YuKaWing/MyHeroVSDragon")}
             className="project-button my-2 mx-auto"
           >
             View Code
-          </a>
+          </div>
         </React.Fragment>
       </Project>
       <Project
