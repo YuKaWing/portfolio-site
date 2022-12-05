@@ -39,7 +39,7 @@ function Projects() {
           <a
             href="https://github.com/YuKaWing/Deep-Learning-for-Content-Based-Image-Retrieval"
             target="_blank"
-            className="project-button m-auto"
+            className="project-button my-2 mx-auto"
           >
             View Code
           </a>
@@ -81,14 +81,14 @@ function Projects() {
           <a
             href="https://yukawing.github.io/MyHeroVSDragon/"
             target="_blank"
-            className="project-button m-auto mb-1"
+            className="project-button my-2 mx-auto"
           >
             Live Demo
           </a>
           <a
             href="https://github.com/YuKaWing/MyHeroVSDragon"
             target="_blank"
-            className="project-button m-auto"
+            className="project-button my-2 mx-auto"
           >
             View Code
           </a>

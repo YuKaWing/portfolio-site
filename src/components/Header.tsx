@@ -31,7 +31,7 @@ function Header() {
 
 
   return (
-    <div className="px-4 h-screen header text-3xl text-white text-center flex justify-center items-center flex-col">
+    <div className="tap-highlight-transparent select-none px-4 h-screen header text-3xl text-white text-center flex justify-center items-center flex-col">
       <div>
         Hello, I am <span className="text-ternary-color">Alex</span>
       </div>
@@ -39,15 +39,15 @@ function Header() {
         <span>I am a </span>
         <span ref={el}></span>
       </div>
-      <Scroll.Link to='about' spy={true} smooth="easeOutQuad" offset={5}>
-        <div className="rgb-button mt-10 flex select-none">
+      <Scroll.Link to='about' spy={true} smooth="easeOutQuad" offset={5} className="mt-10">
+        <div className="rgb-button flex select-none">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-10 mr-2"
+            className="w-10 mr-2 min-w-[40px]"
           >
             <path
               strokeLinecap="round"

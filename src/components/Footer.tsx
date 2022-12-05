@@ -7,7 +7,7 @@ function Footer() {
       <span className="translate-x-[-50%] translate-y-[-50%] absolute top-1/2 left-1/2">
         Made by Alex Yu
       </span>
-      <div onClick={Scroll.animateScroll.scrollToTop} className="top-button custom-shadow cursor-pointer select-none inline-block text-3xl p-1 text-black bg-neutral-100 rounded-full translate-x-[-50%] absolute top-[-25px] left-1/2">
+      <div onClick={Scroll.animateScroll.scrollToTop} className="tap-highlight-transparent top-button custom-shadow cursor-pointer select-none inline-block text-3xl p-1 text-black bg-neutral-100 rounded-full translate-x-[-50%] absolute top-[-25px] left-1/2">
         <AiOutlineArrowUp></AiOutlineArrowUp>
       </div>
     </div>

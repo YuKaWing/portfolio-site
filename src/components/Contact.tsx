@@ -49,7 +49,7 @@ function Contact() {
             <span className="align-middle">Email:&nbsp;</span>
             <a
               href="mailto:yu.ka.wing.alex@gmail.com"
-              className="cursor-pointer align-middle"
+              className="tap-highlight-transparent cursor-pointer align-middle"
               target="_blank"
             >
               <AiTwotoneMail className="text-5xl"></AiTwotoneMail>
@@ -66,7 +66,7 @@ function Contact() {
             <span className="align-middle">LinkedIn:&nbsp;</span>
             <a
               href="https://www.linkedin.com/in/alex-yu-340383247/"
-              className="cursor-pointer align-middle"
+              className="tap-highlight-transparent cursor-pointer align-middle"
               target="_blank"
             >
               <AiFillLinkedin className="text-5xl"></AiFillLinkedin>
@@ -83,7 +83,7 @@ function Contact() {
             <span className="align-middle">GitHub:&nbsp;</span>
             <a
               href="https://github.com/YuKaWing?tab=repositories"
-              className="cursor-pointer align-middle"
+              className="tap-highlight-transparent cursor-pointer align-middle"
               target="_blank"
             >
               <AiFillGithub className="text-5xl"></AiFillGithub>
