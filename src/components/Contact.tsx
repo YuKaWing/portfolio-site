@@ -13,7 +13,7 @@ function Contact() {
         type: "spring",
         bounce: 0.3,
         duration: 1.5,
-        delay: i * 0.1
+        delay: i * 0.05
       }
     })
   };
